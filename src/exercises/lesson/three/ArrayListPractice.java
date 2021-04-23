@@ -15,9 +15,9 @@ public class ArrayListPractice {
     }
 
     public static void printFiveLetterWords(String[] array, int wordLength) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i].length() == wordLength) {
-                System.out.println(array[i]);
+        for (String s : array) {
+            if (s.length() == wordLength) {
+                System.out.println(s);
             }
         }
     }
@@ -28,8 +28,8 @@ public class ArrayListPractice {
         System.out.println("How many letters?");
         int howManyLetters = input.nextInt();
         ArrayList<Integer> stuff = new ArrayList<>();
-        for (int i = 0; i < numbs.length; i++) {
-            stuff.add(numbs[i]);
+        for (int numb : numbs) {
+            stuff.add(numb);
         }
 
         String[] testStrings = {"apple", "bugs", "Mouth"};
