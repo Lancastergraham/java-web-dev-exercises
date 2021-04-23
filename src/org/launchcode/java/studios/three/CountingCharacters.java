@@ -31,7 +31,7 @@ public class CountingCharacters {
         System.out.println("The current working directory is " + currentDirectory);
 
 
-        File myObj = new File("inputFile.txt");
+        File myObj = new File("./src/org/launchcode/java/studios/three/inputFile.txt");
         Scanner myReader = new Scanner(myObj);
 
         printMap(JennaBMap);
