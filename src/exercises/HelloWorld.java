@@ -1,19 +1,17 @@
 package exercises;
 
-import java.util.Scanner;
-
 public class HelloWorld {
 
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        String name;
+    private String message = "Hello World";
 
-        System.out.println("Hello, what is your name: ");
-        name = input.nextLine();
-        input.close();
+    @SuppressWarnings("AccessStaticViaInstance")
+    void sayHello() {
+        String message = "Goodbye World";
 
-        System.out.println("Hello " + name);
-
+        //System.out.println(HelloWorld.message);
+        System.out.println(this.message);
+        //Here we can see variable shadowing, because message in the method has higher
+        // priority. We will get goodbye world.
+        System.out.println(message);
     }
-
 }

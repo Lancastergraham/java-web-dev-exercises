@@ -12,11 +12,20 @@ public class Area {
 
         while (radius < 0) {
             System.out.print("Enter a radius: ");
-            radius = input.nextDouble();
-            area = Circle.getArea(radius);
+            if (input.hasNextDouble()) {
+                radius = input.nextDouble();
+                area = Circle.getArea(radius);
+                System.out.println("The area of a circle of radius " + radius + " is:" +
+                        " " + area);
+            } else {
+                System.out.println("Try again");
+                input.next();
+//                radius = -1;
+            }
+
+
         }
 
-        System.out.println("The area of a circle of radius " + radius + " is:" +
-                " " + area);
+
     }
 }
